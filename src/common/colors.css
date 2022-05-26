@@ -9,3 +9,12 @@
 @value makerColorful: linear-gradient(166deg, rgba(237, 193, 211, 1) 0%,rgba(212, 149, 161, 1) 60%, rgba(162, 63, 63, 1) 100%, rgba(127, 188, 242, 1) 100%);
 @value makerWheat: wheat;
 
+
+@value makerMainNavy :#001064;
+@value makerBlue : #283593;
+@value makerLightBlue : #5f5fc4;
+
+@value makerMainYellow : #ffca28;
+@value makerLightYellow : #fffd61;
+
+

@@ -1,0 +1,33 @@
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 0 0.5rem 0;
+    background-color: #ffca28 ;
+    position: relative;
+}
+
+.logo {
+    width:3.5rem;
+    box-shadow:rgba(217, 217, 217, 1);
+}
+
+.title {
+    margin: 0;
+    font-size: 2rem;
+    color : #001064;
+    font-family: 'Kanit', sans-serif;
+}
+
+/*로그아웃 포지션은 부모요소에 영향을 받는다*/
+.logout {
+    position: absolute;
+    right: 3em;
+    top: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: #001064;
+    color: white;
+    cursor: pointer;
+    border: 0;
+}

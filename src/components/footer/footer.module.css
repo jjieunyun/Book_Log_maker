@@ -1,0 +1,15 @@
+.footer {
+
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    background-color: #001064;
+    padding: 0.5em 0 0.5rem 0;
+    margin-top: 2rem;
+}
+
+.title {
+    color: white;
+    font-size: 0.8em;
+    font-family: 'Noto Sans', sans-serif;
+}

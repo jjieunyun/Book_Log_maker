@@ -1,12 +1,17 @@
 import React from 'react';
 import styles from './header.module.css'
-import logo from '../imgs/logo.png'
+import logo from '../imgs/logo_circle.png'
 
 
-const Header = () => {
+const Header = ({onLogout}) => {
     return (
-        <header>
-            <img className={styles.header_logo} src={logo} alt="logo" />
+        <header className={styles.header}>
+            {/*⭐로그인이 되었다면 로그아웃이 가능한 버튼을 보여줌*/}
+            {onLogout && (<button 
+                className={styles.logout}
+                onClick={onLogout}>Logout</button>)}
+            <img className={styles.logo} src={logo} alt="logo" />
+            <h1 className={styles.title}>Business Card Maker</h1>
         </header>
     );
 };
