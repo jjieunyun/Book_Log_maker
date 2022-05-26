@@ -24,11 +24,11 @@
     position: absolute;
     right: 2em;
     top: 1em;
-    padding: 0.5em;
+    padding: 0.3em 0.5em 0.3em 0.5em;
     border-radius: 5px;
-    background-color: #ffca28;
-    color: #001064;
+    background-color: transparent;
+    color: #ffca28;
     cursor: pointer;
-    border: 0;
+    border: #ffca28 1px solid;
     font-family: 'Kanit', sans-serif;
 }

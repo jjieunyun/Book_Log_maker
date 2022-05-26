@@ -1,13 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../footer/footer';
 import Header from '../header/header';
 import styles from './login.module.css'
 
 const Login = ({authService}) => {
+    const navigator = useNavigate();
+    
+    const goToMaker = (userId) => {
+        //⭐사용자의 정보도 함께 전달~!!!
+        navigator('/maker', {state : { id : userId}} );
+    }
+
     const onLogin = (event) => {
         authService
             .login(event.currentTarget.textContent)
-            .then(console.log)
+            //🍎🍎🍎🍎🍎🍎🍎🍎🍎다시보자!!!
+            .then(data => goToMaker(data.user.uId))
     }
 
     return (

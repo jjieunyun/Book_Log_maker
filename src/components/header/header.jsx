@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './header.module.css'
-import logo from '../imgs/logo_circle.png'
+import logo from '../../imgs/logo_circle.png'
 
 
 const Header = ({onLogout}) => {
