@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Editor from '../editor/editor';
+import Preview from '../preview/Preview';
 import Footer from '../footer/footer';
 import Header from '../header/header';
 import styles from './maker.module.css'
@@ -28,8 +30,10 @@ const Maker = ({authService}) => {
     return (
         <section className={styles.maker}>
             <Header onLogout={onLogout}/>
-            <h1>Maker페이지</h1>
-            <p>로그인 유저 uid값 : {data.id}</p>
+                <div className={styles.container}>
+                    <Editor/>
+                    <Preview/>
+                </div>
             <Footer/>
         </section>
     );

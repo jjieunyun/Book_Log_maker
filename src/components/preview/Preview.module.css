@@ -1,0 +1,16 @@
+@value makerMainNavy from '../../common/colors.css';
+
+.preview {
+    flex-basis: 50%;
+    background-color: lightcyan;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: makerMainNavy;
+    font-family:'Noto Sans', sans-serif;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
+    font-size: 1.8rem;
+}
