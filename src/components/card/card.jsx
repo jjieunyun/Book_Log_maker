@@ -1,3 +1,4 @@
+import { toHaveErrorMessage } from '@testing-library/jest-dom/dist/matchers';
 import React from 'react';
 import styles from './card.module.css'
 
@@ -9,7 +10,14 @@ const Card = ({card}) => {
 
     return (
         <li>
-            <img src="" alt="" />
+            <img src={process.env.PUBLIC_URL + {url}} alt="profile photo" />
+            <div>
+                <h1>{name}</h1>
+                <p>{company}</p>
+                <p>{title}</p>
+                <p>{email}</p>
+                <p>{message}</p>
+            </div>
         </li>
     );
 };
