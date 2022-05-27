@@ -1,0 +1,64 @@
+@value makerMainNavy, makerBlack, makerShadow, makerWhite, makerColorful,makerLightGrey  from '../../common/colors.css';
+@value mainFont from '../../common/size.css';
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+    margin: 0.5em;
+    border-radius: 1em;
+    padding: 0.2em 0;
+    box-shadow: 6px 6px 8px 0px makerShadow;
+    max-width: 30rem;
+    width: 100%;
+}
+
+.card.dark {
+    background-color: makerBlack;
+    color: makerWhite;
+}
+
+.card.light {
+    background-color: makerWhite;
+    color: makerBlack;
+}
+
+.card.colorful {
+    background: makerColorful;
+}
+
+.avatar {
+    width: 10em;
+    height: 10em;
+    padding: 1em;
+    margin-right: 1em;
+    border-radius: 50%;
+}
+
+.info {
+    width: 100%;
+}
+
+.name, .company, .title, .email, .message {
+    margin: 0;
+    font-size: 0.8rem;
+    font-family: mainFont;
+    margin-bottom: 0.2em;
+}
+
+.name {
+    font-size: 1.2rem;
+}
+
+.company {
+    margin-bottom: 1em;
+}
+
+.company::after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: makerLightGrey;
+    transform: translateY(0.5rem);
+}

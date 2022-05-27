@@ -1,9 +1,11 @@
-@value makerMainNavy from '../../common/colors.css';
+@value makerMainNavy, makerWhite from '../../common/colors.css';
 
 .preview {
     flex-basis: 50%;
-    background-color: lightcyan;
+    background-color: makerWhite;
 }
+
+
 
 .title {
     width: 100%;
@@ -13,4 +15,13 @@
     font-family:'Noto Sans', sans-serif;
     text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
     font-size: 1.8rem;
+}
+
+.cards {
+    width: 100%;
+    height: 100%;
+    padding: 0.5em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

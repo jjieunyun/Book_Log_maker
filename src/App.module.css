@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kanit&family=Noto+Sans:wght@300;400&family=Righteous&display=swap');
+@value mainFont './common/size.css';
 
 * {
     box-sizing: border-box;
+    font-family: mainFont;
 }
 
 .app {

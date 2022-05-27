@@ -26,7 +26,7 @@ const Maker = ({authService}) => {
             theme : 'dark',
             title : '멍멍이1',
             email : 'hodu@gmail.com',
-            message : '뚱뚱이',
+            message : '귀여움',
             filteName : 'ddddd',
             fileURL : null
         }
@@ -35,10 +35,10 @@ const Maker = ({authService}) => {
             id : '3',
             name : '꾸꾸',
             company : '지원이집',
-            theme : 'light',
+            theme : 'colorful',
             title : '멍멍이2',
             email : 'gguggu@gmail.com',
-            message : '뚱뚱이',
+            message : '너무귀여움',
             filteName : 'ddddd',
             fileURL : null
         }
