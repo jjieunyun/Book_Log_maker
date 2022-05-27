@@ -30,5 +30,12 @@
     color: #ffca28;
     cursor: pointer;
     border: #ffca28 1px solid;
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.logout:hover {
+    background-color: #ffca28;
+    color: #001064;
+    font-weight: bold;
+    transition: ease-in 0.1s;
 }
