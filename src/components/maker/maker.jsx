@@ -63,11 +63,28 @@ const Maker = ({authService}) => {
         })
     })
 
+    //🍎작성한 input form추가
+    const addCard = card => {
+        const updated = [...cards, card];
+        setCards(updated);
+    };
+
+    //🍎카드내용 업데이트
+    const updateCard = card => {
+        console.log(card)
+    };
+
+    //🍎카드삭제
+    const deleteCard = card => {
+        const updated = [...cards, card];
+        setCards(updated);
+    };
+
     return (
         <section className={styles.maker}>
             <Header onLogout={onLogout}/>
                 <div className={styles.container}>
-                    <Editor cards={cards}/>
+                    <Editor cards={cards} addCard={addCard} updateCard={updateCard} deleteCard={deleteCard}/>
                     <Preview  cards={cards}/>
                 </div>
             <Footer/>
