@@ -12,7 +12,16 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
     const emailRef = useRef();
     const messageRef = useRef();
 
-    const {name, company, title, email, message, theme} = card;
+    const {name, company, title, email, message, theme, fileName} = card;
+
+    //🍎사진 파일이 바뀌면 updateCard함수를 호출해서 로직을 실행
+    const onFileChange = file => {
+        updateCard({
+            ...card,
+            fileName : file.name,
+            fileURL : file.url
+        })
+    }
 
     const onChange = event => {
         if(event.currentTarget == null) {
@@ -79,7 +88,7 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
             ></textarea>
 
             <div className={styles.fileInput}>
-                <FileInput/>
+                <FileInput name={fileName} onFileChange={onFileChange}/>
             </div>
             <Button name='Delete' onClick={onSubmit}/>
         </form>
@@ -87,3 +96,4 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
 };
 
 export default CardEdit;
+

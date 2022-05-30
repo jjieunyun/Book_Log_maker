@@ -21,6 +21,7 @@
 
 /*로그아웃 포지션은 부모요소에 영향을 받는다*/
 .logout {
+    width: 4rem;
     position: absolute;
     right: 2em;
     top: 1em;
