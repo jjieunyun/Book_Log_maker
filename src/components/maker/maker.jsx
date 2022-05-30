@@ -11,39 +11,7 @@ const Maker = ({FileInput , authService}) => {
     //🍎Data를 Object형태로 관리
     //⭐배열을 저장하지 않고 object를 사용한다!! 기존의 project들과 다름 -> 배열로 작성한 코드 수정!
     const [ cards, setCards ] = useState({
-        1 : {
-            id : '1',
-            name : '신동헌',
-            company : '파라다이스 카지노부산',
-            theme : 'light',
-            title : 'Casino Dealer',
-            email : 'donghun@gmail.com',
-            message : '뚱뚱이',
-            filteName : 'ddddd',
-            fileURL : null,
-        },
-        2 : {
-            id : '2',
-            name : '호두',
-            company : '안양',
-            theme : 'dark',
-            title : '멍멍이1',
-            email : 'hodu@gmail.com',
-            message : '귀여움',
-            filteName : 'ddddd',
-            fileURL : null
-        },
-        3 : {
-            id : '3',
-            name : '꾸꾸',
-            company : '지원이집',
-            theme : 'colorful',
-            title : '멍멍이2',
-            email : 'gguggu@gmail.com',
-            message : '너무귀여움',
-            filteName : 'ddddd',
-            fileURL : null
-        }
+        
     });
 
 

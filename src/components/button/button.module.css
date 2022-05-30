@@ -1,13 +1,14 @@
 @value makerWhite, makerGreen from '../../common/colors.css';
+@value mainFont from '../../common/size.css';
 
 .button {
     background-color: makerGreen;
     color: makerWhite;
-    font-weight: bold;
     cursor: pointer;
     padding: 0.5em;
     flex: 1 1 50%;
     font-size: 0.8rem;
+    font-family: mainFont;
   }
   
   .button:hover {

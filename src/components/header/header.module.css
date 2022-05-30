@@ -1,3 +1,4 @@
+@value makerBlack, makerWhite, makerGrey from '../../common/colors.css';
 
 .header {
     width: 100%;
@@ -27,16 +28,14 @@
     top: 1em;
     padding: 0.3em 0.5em 0.3em 0.5em;
     border-radius: 5px;
-    background-color: transparent;
-    color: #ffca28;
+    background-color: makerGrey;
+    color: makerWhite;
     cursor: pointer;
-    border: #ffca28 1px solid;
+    border: none;
     font-family: 'Noto Sans', sans-serif;
 }
 
 .logout:hover {
-    background-color: #ffca28;
-    color: #001064;
-    font-weight: bold;
+    opacity: 0.8;
     transition: ease-in 0.1s;
 }
