@@ -1,10 +1,12 @@
 @value mediaQuery from '../../common/size.css';
+@value makerWhite from '../../common/colors.css';
 
 .maker {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: makerWhite;
 }
 
 .container {
@@ -12,9 +14,8 @@
     flex: 1;
 }
 
-@media screen and (max-width:mediaQuery) {
+@media screen and (max-width: mediaQuery) {
     .container {
         flex-direction: column;
     }
-    
 }

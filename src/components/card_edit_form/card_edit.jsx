@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import Button from '../button/button';
-import ImageFileInput from '../image_file_input/img_file_input';
+//🍎전역으로 선언하고 props로 받아오기 때문에 직접적으로 연결해주지 않아도 된다.
+//import ImageFileInput from '../image_file_input/img_file_input';
 import styles from './card_edit.module.css'
 
-const CardEdit = ({card, updateCard, deleteCard}) => {
+const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
     const nameRef = useRef();
     const companyRef = useRef();
     const themeRef = useRef();
@@ -11,7 +12,7 @@ const CardEdit = ({card, updateCard, deleteCard}) => {
     const emailRef = useRef();
     const messageRef = useRef();
 
-    const {name, company, title, email, message, theme, fileName, fileURL} = card;
+    const {name, company, title, email, message, theme} = card;
 
     const onChange = event => {
         if(event.currentTarget == null) {
@@ -19,12 +20,15 @@ const CardEdit = ({card, updateCard, deleteCard}) => {
         }
         event.preventDefault();
         updateCard( {
+            //⭐기존의 카드를 모두 가져오기  + key : value로 데이터 넣기
             ...card,
             [event.currentTarget.name] : event.currentTarget.value
         });
     };
 
-    const onSubmit = () => {}
+    const onSubmit = () => {
+        deleteCard(card);
+    };
 
     return (
         <form className={styles.form}>
@@ -75,7 +79,7 @@ const CardEdit = ({card, updateCard, deleteCard}) => {
             ></textarea>
 
             <div className={styles.fileInput}>
-                <ImageFileInput/>
+                <FileInput/>
             </div>
             <Button name='Delete' onClick={onSubmit}/>
         </form>
