@@ -21,7 +21,7 @@ const CardAdd = ({FileInput, onAdd }) => {
     }
 
     const onSubmit = event => {
-        console.log(event);
+        // console.log(event);
         event.preventDefault();
 
     const card = {
@@ -37,7 +37,7 @@ const CardAdd = ({FileInput, onAdd }) => {
         };
         
         formRef.current.reset();
-        console.log(card);
+        // console.log(card);
         setFile({fileName: null, fileURL : null});
         onAdd(card);
     };

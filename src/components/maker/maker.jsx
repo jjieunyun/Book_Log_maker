@@ -45,7 +45,7 @@ const Maker = ({FileInput , authService, cardRepository}) => {
         //⭐⭐useEffect return에서는 항상 function을 리턴해 주어야 한다!
         //return stopSync()  이 줄의 코드가 실행되는 순간,stopSync가 실행이 되기 때문에 더이상 sync가 이뤄지지 않음 :)
         return () => stopSync();
-    },[userId])
+    },[userId, cardRepository])
 
 
     //🍎로그아웃 버튼 클릭 후 로그인페이지 이동 : (사용자의 authState가 변경되면 이동)
@@ -58,7 +58,7 @@ const Maker = ({FileInput , authService, cardRepository}) => {
                 navigation('/')
             }
         })
-    })
+    },[authService, userId,navigation])
 
 
     /*

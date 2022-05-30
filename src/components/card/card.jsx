@@ -1,11 +1,10 @@
-import { toHaveErrorMessage } from '@testing-library/jest-dom/dist/matchers';
 import React from 'react';
 import styles from './card.module.css'
 import DEFAULT_IMAGE from '../../imgs/default_logo.png'
 
 
 const Card = ({card}) => {
-    const {name, company, title, email, message, theme, fileName, fileURL} = card;
+    const {name, company, title, email, message, theme, fileURL} = card;
     //⭐fileURL이 없다면? DEFAULT_IMAGE가 출력된다! 
     const url = fileURL || DEFAULT_IMAGE;
 
@@ -24,7 +23,7 @@ const Card = ({card}) => {
 
     return (
         <li className={`${styles.card} ${getStyles(theme)}`}>
-            <img className={styles.avatar} src={ url } alt="profile photo" />
+            <img className={styles.avatar} src={ url } alt="profile" />
             <div className={styles.info}>
                 <h1 className={styles.name}>{name}</h1>
                 <p className={styles.company}>{company}</p>

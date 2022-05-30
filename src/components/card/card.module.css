@@ -29,6 +29,7 @@
   .avatar {
     width: 10em;
     height: 10em;
+    object-fit : cover;
     padding: 1em;
     margin-left: 0.5em;
     margin-right: 1em;
