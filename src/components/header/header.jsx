@@ -13,6 +13,7 @@ const Header = memo(({ onLogout }) => {
                 onClick={onLogout}>Logout</button>)}
             <img className={styles.logo} src={logo} alt="logo" />
             <h1 className={styles.title}>Reading Log</h1>
+            <img className={styles.logo_right} src={logo} alt="logo" />
         </header>
     );
 })

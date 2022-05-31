@@ -4,12 +4,12 @@ import styles from './card_add.module.css'
 
 const CardAdd = memo(({FileInput, onAdd }) => {
     const formRef = useRef();
-    const nameRef = useRef();
-    const companyRef = useRef();
-    const themeRef = useRef();
     const titleRef = useRef();
-    const emailRef = useRef();
-    const messageRef = useRef();
+    const authorRef = useRef();
+    const themeRef = useRef();
+    const startDateRef = useRef();
+    const endDateRef = useRef();
+    const commentRef = useRef();
     const ratingRef = useRef();
 
     const [file, setFile] = useState({fileName: null, fileURL : null});
@@ -21,19 +21,20 @@ const CardAdd = memo(({FileInput, onAdd }) => {
         })
     }
 
+
     const onSubmit = event => {
         // console.log(event);
         event.preventDefault();
 
     const card = {
         id: Date.now(), //uuid
-        name: nameRef.current.value || '',
-        company: companyRef.current.value || '',
-        theme: themeRef.current.value,
         title: titleRef.current.value || '',
-        email: emailRef.current.value || '',
+        author: authorRef.current.value || '',
+        theme: themeRef.current.value,
+        startDate: startDateRef.current.value || '',
+        endDate: endDateRef.current.value || '',
         rating: ratingRef.current.value || '',
-        message: messageRef.current.value || '',
+        comment: commentRef.current.value || '',
         fileName: file.fileName || '',
         fileURL: file.fileURL || '',
         };
@@ -47,41 +48,41 @@ const CardAdd = memo(({FileInput, onAdd }) => {
     return (
         <form ref={formRef} className={styles.form}>
         <input
-            ref={nameRef}
+            ref={titleRef}
             className={styles.input}
-            type="text"
+            type="title"
             name="name"
             placeholder="TITLE"
         />
         <input
-            ref={companyRef}
+            ref={authorRef}
             className={styles.input}
             type="text"
-            name="company"
+            name="author"
             placeholder="AUTHOR"
         />
         <select
             ref={themeRef}
             className={styles.select}
             name="theme"
-            placeholder="THENE"
+            placeholder="THEME"
         >
             <option placeholder="light">light</option>
             <option placeholder="dark">dark</option>
             <option placeholder="colorful">colorful</option>
         </select>
         <input
-            ref={titleRef}
+            ref={startDateRef}
             className={styles.input}
             type="text"
-            name="title"
+            name="startDate"
             placeholder="START DATE"
         />
         <input
-            ref={emailRef}
+            ref={endDateRef}
             className={styles.input}
             type="text"
-            name="email"
+            name="endDate"
             placeholder="END DATE"
         />
 
@@ -98,15 +99,15 @@ const CardAdd = memo(({FileInput, onAdd }) => {
             </select>
 
         <textarea
-            ref={messageRef}
+            ref={commentRef}
             className={styles.textarea}
-            name="message"
+            name="comment"
             placeholder="COMMENT"
         />
         <div className={styles.fileInput}>
             <FileInput name={file.fileName} onFileChange={onFileChange} />
         </div>
-            <Button  name="Add" onClick={onSubmit} />
+            <Button   name="Add" onClick={onSubmit} />
         </form>
     );
 })

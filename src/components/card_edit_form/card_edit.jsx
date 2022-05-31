@@ -5,15 +5,15 @@ import Button from '../button/button';
 import styles from './card_edit.module.css'
 
 const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
-    const nameRef = useRef();
-    const companyRef = useRef();
-    const themeRef = useRef();
     const titleRef = useRef();
-    const emailRef = useRef();
-    const messageRef = useRef();
+    const authorRef = useRef();
+    const themeRef = useRef();
+    const startDateRef = useRef();
+    const endDateRef = useRef();
+    const commentRef = useRef();
     const ratingRef = useRef();
 
-    const {name, company, title, email, message, theme, fileName, rating} = card;
+    const {title, author, startDate, endDate, comment, theme, fileName, rating} = card;
 
     //🍎사진 파일이 바뀌면 updateCard함수를 호출해서 로직을 실행
     const onFileChange = file => {
@@ -55,16 +55,16 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
             <input 
                 className={styles.input} 
                 type="text" 
-                name='name' 
-                ref={nameRef} 
-                value={name}
+                name='title' 
+                ref={titleRef} 
+                value={title}
                 onChange={onChange}
             />
             <input className={styles.input} 
                 type="text" 
-                name='company' 
-                ref={companyRef} 
-                value={company}
+                name='author' 
+                ref={authorRef} 
+                value={author}
                 onChange={onChange}
             />
             <select className={styles.select} 
@@ -79,16 +79,16 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
             </select>
             <input className={styles.input} 
                 type="text" 
-                name='title' 
-                ref={titleRef} 
-                value={title}
+                name='startDate' 
+                ref={startDateRef} 
+                value={startDate}
                 onChange={onChange}
             />
             <input className={styles.input} 
                 type="text" 
-                name='email' 
-                ref={emailRef} 
-                value={email}
+                name='endDate' 
+                ref={endDateRef} 
+                value={endDate}
                 onChange={onChange}
             />
 
@@ -106,9 +106,9 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
             </select>
 
             <textarea className={styles.textarea} 
-                name="message" 
-                ref={messageRef} 
-                value={message}
+                name="comment" 
+                ref={commentRef} 
+                value={comment}
                 onChange={onChange}
             ></textarea>
 

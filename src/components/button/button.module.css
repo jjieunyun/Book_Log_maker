@@ -1,7 +1,7 @@
 @value makerWhite, makerGreen, makerDarkGreen from '../../common/colors.css';
 @value mainFont from '../../common/size.css';
 
-.button {
+.button,.add {
     background-color: makerDarkGreen;
     color: makerWhite;
     cursor: pointer;
@@ -12,7 +12,11 @@
     border: 1px solid black;
   }
   
-  .button:hover {
+  .button:hover, .add:hover {
     opacity: 0.8;
   }
   
+
+  .add {
+    background-color: makerGreen;
+  }

@@ -4,7 +4,7 @@ import DEFAULT_IMAGE from '../../imgs/default_logo.png'
 
 
 const Card = memo(
-    ({name, company, title, email, message, theme, fileURL, rating})  => {
+    ({title, author, theme, startDate, endDate, rating, fileURL, comment})  => {
     //⭐fileURL이 없다면? DEFAULT_IMAGE가 출력된다! 
     const url = fileURL || DEFAULT_IMAGE;
     const [emoji, setEmoji] = useState(rating);
@@ -15,19 +15,19 @@ const Card = memo(
 
     return (
         <li className={`${styles.card} ${getStyles(theme)}`}>
-            <img className={styles.avatar} src={ url } alt="profile" />
+            <img className={styles.avatar} src={ url } alt="book" />
             <div className={styles.info}>
                 <div className={styles.titleBox}>
-                    <h1 className={styles.name}>" {name} "</h1>
+                    <h1 className={styles.title}>" {title} "</h1>
                     <p className={styles.rating}>{emoji}</p>
                 </div>
-                    <p className={styles.company}>{company}</p>
+                    <p className={styles.author}>{author}</p>
                 <div className={styles.date}>
-                    <p className={styles.title}>( {title}&nbsp;~&nbsp;</p>
-                    <p className={styles.email}> {email} )</p>
+                    <p className={styles.startDate}>( {startDate}&nbsp;~&nbsp;</p>
+                    <p className={styles.endDate}> {endDate} )</p>
                 </div>
                 
-                <p className={styles.message}>{message}</p>
+                <p className={styles.comment}>{comment}</p>
             </div>
         </li>
     );

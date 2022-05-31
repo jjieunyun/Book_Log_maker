@@ -20,6 +20,12 @@
     box-shadow:rgba(217, 217, 217, 1);
 }
 
+.logo_right {
+    width:2.7rem;
+    box-shadow:rgba(217, 217, 217, 1);
+    transform: rotateY(180deg);
+}
+
 .title {
     margin: 0;
     font-size: 2.5rem;

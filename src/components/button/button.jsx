@@ -7,4 +7,6 @@ const Button = memo(({name, onClick}) => {
     );
 })
 
+
+
 export default Button;

@@ -9,7 +9,7 @@
     margin-bottom: 0.8em;
     padding: 0.2em 0;
     box-shadow: 6px 6px 8px 0px makerShadow;
-    max-width: 30rem;
+    max-width: 32rem;
   }
   
   .card.dark {
@@ -38,6 +38,7 @@
 
   .info {
     width: 100%;
+    padding: 0.1rem;
   }
 
   .titleBox {
@@ -55,33 +56,35 @@
 
   .rating {
     margin-right: 1.8rem;
+    font-size: 0.8em;
   }
   
-  .name,
-  .company,
   .title,
-  .email,
-  .message {
+  .author,
+  .startDate,
+  .endDate,
+  .comment {
     margin: 0;
     font-size: 0.8rem;
     margin-bottom: 0.2em;
     font-family: mainFont;
   }
   
-  .name {
-    font-size: 1.2rem;
+  .title {
+    font-size: 1.2em;
+
   }
 
-  .message {
+  .comment {
     margin-top: 0.5em;
-    padding-right: 0.5em;
+    padding-right: 0.8em;
   }
   
-  .company {
+  .author {
     margin-bottom: 1em;
   }
   
-  .company::after {
+  .author::after {
     content: '';
     display: block;
     width: 90%;

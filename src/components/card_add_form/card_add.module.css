@@ -1,4 +1,4 @@
-@value makerBlack, makerWhite from '../../common/colors.css';
+@value makerBlack, makerWhite, makerLime, makerGreen, makerLightGreen, makerDarkGreen from '../../common/colors.css';
 
 .form {
     display: flex;
@@ -42,5 +42,11 @@
 
 .textarea {
     flex-basis: 100%;
+}
+
+.input::placeholder,
+.textarea::placeholder,
+.select{
+    color: makerGreen;
 }
 
