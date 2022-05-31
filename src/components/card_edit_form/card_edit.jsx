@@ -36,11 +36,13 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
         });
     };
 
-    const onSubmit = () => {
+    const onSubmit = (event) => {
+        event.preventDefault();
         if(window.confirm("Log를 정말 삭제 하시겠습니까?")){
             console.log('bb')
             deleteCard(card);
-        }alert('Log를 삭제했습니다.');
+            alert('Log를 삭제했습니다.');
+        }
     };
 
 

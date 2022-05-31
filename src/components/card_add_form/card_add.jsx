@@ -106,7 +106,7 @@ const CardAdd = memo(({FileInput, onAdd }) => {
         <div className={styles.fileInput}>
             <FileInput name={file.fileName} onFileChange={onFileChange} />
         </div>
-            <Button name="Add" onClick={onSubmit} />
+            <Button  name="Add" onClick={onSubmit} />
         </form>
     );
 })
