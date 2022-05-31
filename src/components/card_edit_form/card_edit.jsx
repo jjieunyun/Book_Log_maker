@@ -37,8 +37,16 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
     };
 
     const onSubmit = () => {
-        deleteCard(card);
+        if(Window.confirm("Log를 정말 삭제 하시겠습니까?")){
+            deleteCard(card);
+            alert('Log를 삭제했습니다.');
+        }
     };
+
+
+    // const onSubmit = () => {
+    //     deleteCard(card);
+    // };
 
     return (
         <form className={styles.form}>
