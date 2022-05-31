@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.module.css';
 import App from './App';
@@ -16,7 +16,7 @@ const authService =  new AuthService(firebaseApp);
 // 장점 : 쓸데없이 많은 서비스를 전달하지 않아도 된다, dependency injection을 심플하게 할 수있다.
 const imageUploader = new ImageUploader();
 const cardRepository = new CardRepository();
-const FileInput = props => (<ImageFileInput {...props} imageUploader={imageUploader} />)
+const FileInput = memo(props => (<ImageFileInput {...props} imageUploader={imageUploader} />));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { memo, useRef, useState } from 'react';
 import styles from './img_file_input.module.css';
 
 //🍎fileInput CSS
 //file input을 꾸밀 수 있는 방법이 많이 없기 때문에 , 파일은 수동으로 업데이트! ->
 //파일input은 보여주지 말고, file의 이름을 보여주는 button을 ui에 출력.
 
-const ImageFileInput = ({imageUploader, name, onFileChange}) => {
+const ImageFileInput = memo(({imageUploader, name, onFileChange}) => {
     //⭐button이 클릭이되면 input이 클릭된것처럼 해주기
     const inputRef = useRef();
 
@@ -49,6 +49,6 @@ const ImageFileInput = ({imageUploader, name, onFileChange}) => {
             </button>)}
         { loading && <div className={styles.loading}></div> }
     </div>
-};
+});
 
 export default ImageFileInput;

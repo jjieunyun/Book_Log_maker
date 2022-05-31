@@ -1,25 +1,12 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './card.module.css'
 import DEFAULT_IMAGE from '../../imgs/default_logo.png'
 
 
-const Card = ({card}) => {
-    const {name, company, title, email, message, theme, fileURL} = card;
+const Card = memo(
+    ({name, company, title, email, message, theme, fileURL})  => {
     //⭐fileURL이 없다면? DEFAULT_IMAGE가 출력된다! 
     const url = fileURL || DEFAULT_IMAGE;
-
-    function getStyles(theme) {
-        switch(theme) {
-            case 'dark' : 
-                return styles.dark;
-            case 'light' :
-                return styles.light;
-            case 'colorful' : 
-                return styles.colorful;
-                default:
-                throw new Error(`unknown theme : ${theme}`);
-        }
-    }
 
     return (
         <li className={`${styles.card} ${getStyles(theme)}`}>
@@ -33,6 +20,23 @@ const Card = ({card}) => {
             </div>
         </li>
     );
-};
+
+    
+});
+
+function getStyles(theme) {
+    switch(theme) {
+        case 'dark' : 
+            return styles.dark;
+        case 'light' :
+            return styles.light;
+        case 'colorful' : 
+            return styles.colorful;
+            default:
+            throw new Error(`unknown theme : ${theme}`);
+    }
+}
+
+
 
 export default Card;

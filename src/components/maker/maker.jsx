@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Editor from '../editor/editor';
 import Preview from '../preview/Preview';
@@ -20,9 +20,16 @@ const Maker = ({FileInput , authService, cardRepository}) => {
     const [userId, setUserId] = useState(locationData && locationData.id);
 
     //🍎로그아웃함수
-    const onLogout = () => {
+    /*⭐header가 onLogout을 참조하고 있으므로 onLogout은 렌더링될때마다 호출하게되면 
+    header의 memo를 사용할 수없다!! 
+    => useCallback을 사용해주어야함
+    
+    ⭐⭐인증과 관련있는 부분이기때문에 주의해야할점❗❗❗❗
+    => 미리 정보를 callback으로 저장해놓기 때문에 authService가 바뀌면 다시 호출해주어야한다
+    */
+    const onLogout = useCallback(() => {
         authService.logout();
-    }
+    },[authService])
 
     //🍎firebase에서 데이터를 불러주는 함수 (⭐useEffect는 로직별로 분리할 수있다.)
     useEffect(()=> {

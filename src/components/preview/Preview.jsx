@@ -9,7 +9,7 @@ const Preview = ({cards}) => {
             <ul className={styles.cards}>
                 {Object.keys(cards).map(key => {
                     //* , value에는 cards가 들어있다.*
-                        return <Card key={key} card={cards[key]}/>
+                        return <Card key={key} {...cards[key]}/>
                     })
                 }
             </ul>
