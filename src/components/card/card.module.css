@@ -1,4 +1,4 @@
-@value makerMainNavy, makerBlack, makerShadow, makerWhite, makerColorful,makerLightGrey  from '../../common/colors.css';
+@value makerMainNavy, makerBlack, makerShadow, makerWhite, makerBrown, makerColorful, makerLightGrey  from '../../common/colors.css';
 @value mainFont from '../../common/size.css';
 
 .card {
@@ -6,15 +6,14 @@
     align-items: center;
     width: 100%;
     border-radius: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
     padding: 0.2em 0;
-    background-color: yellow;
     box-shadow: 6px 6px 8px 0px makerShadow;
     max-width: 30rem;
   }
   
   .card.dark {
-    background-color: makerBlack;
+    background-color: makerBrown;
     color: makerWhite;
   }
   
@@ -29,15 +28,33 @@
   .avatar {
     width: 10em;
     height: 10em;
-    object-fit : cover;
-    padding: 1em;
+    padding: 0.8em;
+    margin: 0.8em;
     margin-left: 0.5em;
-    margin-right: 1em;
-    border-radius: 50%;
+    margin-right: 0.5em;
+    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.5));
+    object-fit: cover;
   }
-  
+
   .info {
     width: 100%;
+  }
+
+  .titleBox {
+    display: flex;
+    flex-direction: row;
+    height: 2.5em;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .date {
+    display: flex;
+    padding-top: 0.2em;
+  }
+
+  .rating {
+    margin-right: 1.8rem;
   }
   
   .name,
@@ -53,6 +70,11 @@
   
   .name {
     font-size: 1.2rem;
+  }
+
+  .message {
+    margin-top: 0.5em;
+    padding-right: 0.5em;
   }
   
   .company {

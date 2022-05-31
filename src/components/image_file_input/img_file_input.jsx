@@ -44,7 +44,7 @@ const ImageFileInput = memo(({imageUploader, name, onFileChange}) => {
         />
         {/*로딩이 아니면 1번보여주고 , 로딩이면 2번 스피너를 보여준다*/}
         { !loading && (
-            <button className={`${styles.button} ${name? styles.pink : styles.grey}`} onClick={onButtonClick}>
+            <button className={`${styles.button} ${name? styles.lightGreen : styles.grey}`} onClick={onButtonClick}>
                 {name || 'No file'}
             </button>)}
         { loading && <div className={styles.loading}></div> }

@@ -1,34 +1,44 @@
-@value makerBlack, makerWhite, makerGrey from '../../common/colors.css';
+@value makerBlack, makerWhite, makerGrey, makerBrown from '../../common/colors.css';
 
 .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
     width: 100%;
     text-align: center;
     padding: 0.5em 0 0.5rem 0;
-    background-color: #001064 ;
+    background-color: makerWhite;
     position: relative;
+    border-bottom: makerBrown 1px solid;
+    box-sizing: border-box;
 }
 
 .logo {
-    width:3.5rem;
+    width:2.7rem;
     box-shadow:rgba(217, 217, 217, 1);
 }
 
 .title {
     margin: 0;
-    font-size: 2rem;
-    color : white;
-    font-family: 'Kanit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: border ;
+    color : #594f4f;
+    font-family: 'Ms Madi', cursive;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
 }
 
 /*로그아웃 포지션은 부모요소에 영향을 받는다*/
 .logout {
     width: 4rem;
     position: absolute;
-    right: 2em;
+    right: 1em;
     top: 1em;
     padding: 0.3em 0.5em 0.3em 0.5em;
     border-radius: 5px;
-    background-color: makerGrey;
+    background-color: #594f4f;
+    opacity: 0.8;
     color: makerWhite;
     cursor: pointer;
     border: none;
@@ -36,6 +46,6 @@
 }
 
 .logout:hover {
-    opacity: 0.8;
+    opacity: 1;
     transition: ease-in 0.1s;
 }

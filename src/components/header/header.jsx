@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import styles from './header.module.css'
-import logo from '../../imgs/logo_circle.png'
+import logo from '../../imgs/Logo_ink.png'
 
 
 const Header = memo(({ onLogout }) => {
@@ -11,9 +11,8 @@ const Header = memo(({ onLogout }) => {
             <button 
                 className={styles.logout}
                 onClick={onLogout}>Logout</button>)}
-                
             <img className={styles.logo} src={logo} alt="logo" />
-            <h1 className={styles.title}>Business Card Maker</h1>
+            <h1 className={styles.title}>Reading Log</h1>
         </header>
     );
 })

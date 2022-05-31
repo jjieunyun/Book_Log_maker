@@ -3,19 +3,24 @@
 @value makerLightGrey: #e8e7e6;
 @value makerLightPink: #ffeae8;
 @value makerGrey: #626262;
-@value makerGreen: #385461;
 @value makerPink: pink;
 @value makerShadow: rgba(217, 217, 217, 1);
-@value makerColorful: linear-gradient(166deg, rgba(237, 193, 211, 1) 0%,rgba(212, 149, 161, 1) 60%, rgba(162, 63, 63, 1) 100%, rgba(127, 188, 242, 1) 100%);
+@value makerColorful: linear-gradient(180deg, hsla(190, 21%, 42%, 1) 0%, hsla(84, 91%, 87%, 1) 100%);
+
+
 @value makerWheat: wheat;
 @value makerShadow: rgba(217,217,217,1);
 
 
-@value makerMainNavy:#001064;
+/* @value makerMainNavy:#001064;
 @value makerBlue: #283593;
 @value makerLightBlue: #5f5fc4;
 
 @value makerMainYellow: #ffca28;
-@value makerLightYellow: #fffd61;
+@value makerLightYellow: #fffd61; */
 
-
+@value makerLime: #E5FCC2;
+@value makerLightGreen: #9de0ad;
+@value makerGreen: #45ada8;
+@value makerDarkGreen: #547980;
+@value makerBrown: #594f4f;

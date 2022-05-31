@@ -11,8 +11,9 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
     const titleRef = useRef();
     const emailRef = useRef();
     const messageRef = useRef();
+    const ratingRef = useRef();
 
-    const {name, company, title, email, message, theme, fileName} = card;
+    const {name, company, title, email, message, theme, fileName, rating} = card;
 
     //🍎사진 파일이 바뀌면 updateCard함수를 호출해서 로직을 실행
     const onFileChange = file => {
@@ -80,6 +81,20 @@ const CardEdit = ({FileInput,card, updateCard, deleteCard}) => {
                 value={email}
                 onChange={onChange}
             />
+
+            <select className={styles.select} 
+                name="rating" 
+                ref={ratingRef} 
+                vlaue={rating}
+                onChange={onChange}
+            >
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+
             <textarea className={styles.textarea} 
                 name="message" 
                 ref={messageRef} 

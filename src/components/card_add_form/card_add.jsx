@@ -10,6 +10,7 @@ const CardAdd = memo(({FileInput, onAdd }) => {
     const titleRef = useRef();
     const emailRef = useRef();
     const messageRef = useRef();
+    const ratingRef = useRef();
 
     const [file, setFile] = useState({fileName: null, fileURL : null});
 
@@ -31,6 +32,7 @@ const CardAdd = memo(({FileInput, onAdd }) => {
         theme: themeRef.current.value,
         title: titleRef.current.value || '',
         email: emailRef.current.value || '',
+        rating: ratingRef.current.value || '',
         message: messageRef.current.value || '',
         fileName: file.fileName || '',
         fileURL: file.fileURL || '',
@@ -49,20 +51,20 @@ const CardAdd = memo(({FileInput, onAdd }) => {
             className={styles.input}
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder="TITLE"
         />
         <input
             ref={companyRef}
             className={styles.input}
             type="text"
             name="company"
-            placeholder="Company"
+            placeholder="AUTHOR"
         />
         <select
             ref={themeRef}
             className={styles.select}
             name="theme"
-            placeholder="Theme"
+            placeholder="THENE"
         >
             <option placeholder="light">light</option>
             <option placeholder="dark">dark</option>
@@ -73,26 +75,39 @@ const CardAdd = memo(({FileInput, onAdd }) => {
             className={styles.input}
             type="text"
             name="title"
-            placeholder="Title"
+            placeholder="START DATE"
         />
         <input
             ref={emailRef}
             className={styles.input}
             type="text"
             name="email"
-            placeholder="Email"
+            placeholder="END DATE"
         />
+
+            <select className={styles.select} 
+                name="rating" 
+                ref={ratingRef} 
+                placeholder="RATING"
+            >
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+
         <textarea
             ref={messageRef}
             className={styles.textarea}
             name="message"
-            placeholder="Message"
+            placeholder="COMMENT"
         />
         <div className={styles.fileInput}>
             <FileInput name={file.fileName} onFileChange={onFileChange} />
         </div>
         <Button name="Add" onClick={onSubmit} />
         </form>
-  );
+    );
 })
 export default CardAdd;

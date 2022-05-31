@@ -7,7 +7,7 @@ import styles from './editor.module.css'
 const Editor = ({FileInput,cards, addCard, updateCard, deleteCard}) => {
     return (
         <section className={styles.editor}>
-            <h1 className={styles.title}>Card Maker</h1>
+            <h1 className={styles.title}>Log Maker</h1>
             {/*
             ⭐cards는 배열이 아니기 때문에 map할 수 있는 상태로 변환시켜야한다 => cards안의 key를 map한다!
             Object안에 keys라는 함수를 이용해서 cards의 key를 받아옴 ->*/}
