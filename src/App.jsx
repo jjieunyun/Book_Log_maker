@@ -9,8 +9,8 @@ function App({FileInput ,authService, cardRepository}) {
     <div className={styles.app} basename={process.env.PUBLIC_URL}>
       <BrowserRouter>
         <Routes>
-          <Route exact path='/' element={<Login authService={authService}/>} />
-          <Route path='/maker' element={<Maker FileInput={FileInput} authService={authService} 
+          <Route exact path='/Book_Log_maker' element={<Login authService={authService}/>} />
+          <Route path='/Book_Log_maker/maker' element={<Maker FileInput={FileInput} authService={authService} 
                 cardRepository={cardRepository} />} />
         </Routes>
       </BrowserRouter>

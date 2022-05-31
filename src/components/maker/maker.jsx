@@ -62,7 +62,7 @@ const Maker = ({FileInput , authService, cardRepository}) => {
                 setUserId(user.uid)
             }else {
                 //⭐사용자의 정보가 변경될 떄마다, setUserId호출
-                navigation('/')
+                navigation('/Book_Log_maker')
             }
         })
     },[authService, userId,navigation])

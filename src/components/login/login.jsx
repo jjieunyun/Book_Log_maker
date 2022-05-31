@@ -9,7 +9,7 @@ const Login = ({authService}) => {
     
     const goToMaker = (userId) => {
         //⭐사용자의 정보도 함께 전달~!!!
-        navigator('/maker', {state : { id : userId}} );
+        navigator('/Book_Log_maker/maker', {state : { id : userId}} );
     }
 
     const onLogin = (event) => {
