@@ -24,3 +24,6 @@ ___
 * JavaScript의 Observer를 활용해서 정해진 스크롤위치에 이동했을 때, Progress Bar가움직입니다
 * Modal창을 직접 만들어 상세설명이 필요한 MyWorks부분에 적용했습니다.
 * React Keen-Slider 라이브러리를 활용했습니다.
+
+### ⚒️Technology Stacks
+<img alt="badge" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/><img alt="badge" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>
